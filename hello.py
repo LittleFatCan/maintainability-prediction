@@ -1,23 +1,12 @@
-# Program to display the Fibonacci sequence up to n-th term
+# Python Program to find the factors of a number
 
-nterms = int(input("How many terms? "))
+# This function computes the factor of the argument passed
+def print_factors(x):
+   print("The factors of",x,"are:")
+   for i in range(1, x + 1):
+       if x % i == 0:
+           print(i)
 
-# first two terms
-n1, n2 = 0, 1
-count = 0
+num = 320
 
-# check if the number of terms is valid
-if nterms <= 0:
-   print("Please enter a positive integer")
-elif nterms == 1:
-   print("Fibonacci sequence upto",nterms,":")
-   print(n1)
-else:
-   print("Fibonacci sequence:")
-   while count < nterms:
-       print(n1)
-       nth = n1 + n2
-       # update values
-       n1 = n2
-       n2 = nth
-       count += 1
+print_factors(num)
